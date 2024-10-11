@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    {% load static %} <!-- Load static files in Django -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"> <!-- Link to external CSS file -->
+</head>
+<body>
+    <div class="container">
+        <!-- Background image -->
+        <img src="{% static 'images/my_img.jpg' %}" alt="Background Image"> <!-- Image that serves as the background -->
+        <!-- Semi-transparent overlay -->
+        <div class="overlay"></div> <!-- Overlay to darken the background image -->
+        <!-- Transparent navbar with centered links -->
+        <div class="navbar">
+            <h2 style="color:blue">EMPLOYEE MANAGEMENT SYSTEM</h2>
+            <a href="{% url 'login_view' %}">Login</a> <!-- Login link -->
+            <a href="{% url 'reg_view' %}">Register</a> <!-- Register Employee link -->
+        </div>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+    </div>
+  
+</body>
+</html>
